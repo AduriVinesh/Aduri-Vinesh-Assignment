@@ -2,7 +2,7 @@ package assignment;
 
 import java.util.Scanner;
 
-class ArmStrongBtw1To1000
+class ArmStrongBtw99to100
 {
 static boolean isArmStrong(int x)
 {
