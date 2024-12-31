@@ -1,0 +1,151 @@
+# Hands-On Exercises for Spring Boot Topics
+
+## 1. Spring Boot Basics
+**Exercise**: Create a basic Spring Boot application.
+- **Steps**:
+  1. Set up a new Spring Boot project using [Spring Initializr](https://start.spring.io/).
+  2. Create a `HelloController` with a `GET /hello` endpoint returning "Hello, World!".
+- **Learning**: Understand the project structure, application properties, and annotations like `@SpringBootApplication` and `@RestController`.
+
+---
+
+## 2. Dependency Injection
+**Exercise**: Implement a simple service-layer pattern.
+- **Steps**:
+  1. Create a `GreetingService` interface and a `GreetingServiceImpl` class.
+  2. Inject the service into a controller using `@Autowired` and call a method like `getGreeting()`.
+- **Learning**: Understand `@Component`, `@Service`, and `@Autowired`.
+
+---
+
+## 3. Spring Boot Configuration
+**Exercise**: Externalize configuration using `application.properties`.
+- **Steps**:
+  1. Add custom properties like `app.greeting=Hello, Spring Boot!`.
+  2. Access these properties using `@Value` or a `@ConfigurationProperties` class.
+- **Learning**: Understand how to use properties for environment-specific configurations.
+
+---
+
+## 4. REST API Development
+**Exercise**: Build a CRUD API for managing employees.
+- **Steps**:
+  1. Define a `Employee` entity.
+  2. Create endpoints for `POST /employees`, `GET /employees`, `GET /employees/{id}`, `PUT /employees/{id}`, and `DELETE /employees/{id}`.
+- **Learning**: Use `@RestController`, `@RequestMapping`, `@PathVariable`, and `@RequestBody`.
+
+---
+
+## 5. Spring Data JPA
+**Exercise**: Implement data persistence with Spring Data JPA.
+- **Steps**:
+  1. Set up an H2 in-memory database.
+  2. Create a repository interface (`EmployeeRepository`) extending `JpaRepository`.
+  3. Perform CRUD operations through the repository.
+- **Learning**: Understand `@Entity`, `@Id`, and how Spring Boot auto-configures JPA.
+
+---
+
+## 6. Spring Boot Validation
+**Exercise**: Add validation to the Employee API.
+- **Steps**:
+  1. Use `@Valid` and `javax.validation.constraints` (e.g., `@NotNull`, `@Size`, `@Min`) in the `Employee` entity.
+  2. Handle validation errors using a `@ControllerAdvice` and `@ExceptionHandler`.
+- **Learning**: Validate user input and handle exceptions gracefully.
+
+---
+
+## 7. Spring Boot Security
+**Exercise**: Secure endpoints with Spring Security.
+- **Steps**:
+  1. Add Spring Security to the project.
+  2. Secure the `/employees` endpoints with basic authentication.
+  3. Customize users and roles in the `SecurityConfig` class.
+- **Learning**: Understand `WebSecurityConfigurerAdapter` and the security filter chain.
+
+---
+
+## 8. Working with Databases
+**Exercise**: Switch to MySQL/PostgreSQL from H2.
+- **Steps**:
+  1. Configure the database in `application.properties`.
+  2. Test CRUD operations with the new database.
+- **Learning**: Database configurations and migrations.
+
+---
+
+## 9. Error Handling
+**Exercise**: Centralize exception handling.
+- **Steps**:
+  1. Create custom exceptions like `EmployeeNotFoundException`.
+  2. Use `@ControllerAdvice` and `@ExceptionHandler` to handle exceptions globally.
+- **Learning**: Understand exception handling in Spring Boot.
+
+---
+
+## 10. Spring Boot Actuator
+**Exercise**: Monitor the application.
+- **Steps**:
+  1. Add Spring Boot Actuator to your project.
+  2. Explore endpoints like `/actuator/health` and `/actuator/metrics`.
+  3. Customize health checks using a `HealthIndicator`.
+- **Learning**: Monitor application health and metrics.
+
+---
+
+## 11. Asynchronous Programming
+**Exercise**: Implement asynchronous methods.
+- **Steps**:
+  1. Use `@Async` in a service to perform a long-running task.
+  2. Enable async processing with `@EnableAsync`.
+- **Learning**: Understand threading in Spring Boot.
+
+---
+
+## 12. Scheduling
+**Exercise**: Add a scheduled task.
+- **Steps**:
+  1. Use `@Scheduled` to print a message every 10 seconds.
+  2. Enable scheduling with `@EnableScheduling`.
+- **Learning**: Automate tasks using Spring Boot’s scheduling feature.
+
+---
+
+## 13. Spring Boot Profiles
+**Exercise**: Use profiles for environment-specific configuration.
+- **Steps**:
+  1. Create separate `application-dev.properties` and `application-prod.properties` files.
+  2. Activate a profile (`dev` or `prod`) using `spring.profiles.active` in `application.properties`.
+- **Learning**: Switch configurations based on environments.
+
+---
+
+## 14. Spring Boot Testing
+**Exercise**: Write unit and integration tests.
+- **Steps**:
+  1. Use `@SpringBootTest` and `@MockBean` for integration testing.
+  2. Test REST endpoints using `MockMvc`.
+- **Learning**: Write reliable tests for Spring Boot applications.
+
+---
+
+## 15. Message Queues (RabbitMQ/Kafka)
+**Exercise**: Send and receive messages.
+- **Steps**:
+  1. Use Spring Boot to connect to RabbitMQ/Kafka.
+  2. Create a producer and consumer for sending and receiving messages.
+- **Learning**: Implement messaging in Spring Boot.
+
+---
+
+## 16. Spring Boot with Microservices
+**Exercise**: Create a simple microservices architecture.
+- **Steps**:
+  1. Build two services: `UserService` and `OrderService`.
+  2. Communicate between them using `RestTemplate` or `WebClient`.
+- **Learning**: Microservices communication.
+
+---
+
+If you need detailed code examples or further explanations for any of these topics, let me know!
+
